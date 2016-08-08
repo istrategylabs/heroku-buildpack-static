@@ -202,6 +202,15 @@ When there are header conflicts, the last header definition always wins. The hea
 
 when accessing `/foo`, `X-Foo` will have the value `"foo"` and `X-Bar` will not be present.
 
+#### Basic Auth
+This allows you to restrict access to your site via HTTP Basic Authentication.  Simply include a [properly formatted](http://nginx.org/en/docs/http/ngx_http_auth_basic_module.html#auth_basic_user_file) `.htpasswd` file in the root folder of your application.
+
+```json
+{
+  "basic_auth": true
+}
+```
+
 ### Route Ordering
 
 * Root Files
