@@ -43,8 +43,8 @@ http {
   <% end %>
 
   <% if basic_auth %>
-    auth_basic "closed site";
-    auth_basic_user_file ../.htpasswd;
+    auth_basic "Restricted";
+    auth_basic_user_file <%= basic_auth_htpasswd_path %>;
   <% end %>
 
     location / {

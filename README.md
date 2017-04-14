@@ -211,6 +211,9 @@ This allows you to restrict access to your site via HTTP Basic Authentication.  
 }
 ```
 
+The environment variable `BASIC_AUTH` can optionally be set to `true` to enable authentication only on a specific environment. If not set (or falsy), falls back to `static.json`.
+
+
 ### Route Ordering
 
 * Root Files
